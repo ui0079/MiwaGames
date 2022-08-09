@@ -8,12 +8,15 @@ public class EnemyHealth : MonoBehaviour
     public GameObject effectPrefab;
     public AudioClip destroySound;
     public int enemyHP;
+    
+
+    
 
     public void Damage(int damage) {
         enemyHP -= damage;
         if (enemyHP <= 0)
     {
-        
+        MoveCharactorController.instance.AddExp(3);
         Destroy(gameObject);
 
     }
