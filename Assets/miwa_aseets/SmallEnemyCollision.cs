@@ -16,6 +16,9 @@ public class SmallEnemyCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f)) {
+		return;
+	}
         Vector3 pv = player.transform.position;
         Vector3 ev = transform.position;
  
