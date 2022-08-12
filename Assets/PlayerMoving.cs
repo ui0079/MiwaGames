@@ -14,6 +14,9 @@ public class PlayerMoving : MonoBehaviour
     }
     private void Update()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f)) {
+		return;
+	}
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
         anim.SetBool("isWalking", movement != Vector2.zero);

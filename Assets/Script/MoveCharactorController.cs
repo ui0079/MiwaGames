@@ -84,6 +84,9 @@ public class MoveCharactorController : MonoBehaviour
 
     void Update()
     {
+        if (Mathf.Approximately(Time.timeScale, 0f)) {
+		return;
+	}
         Vector2 position = transform.position;
 
         if (Input.GetKey("left"))
