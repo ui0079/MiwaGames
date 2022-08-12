@@ -35,7 +35,7 @@ public class MoveCharactorController : MonoBehaviour
 
         // まだレベルアップに必要な経験値に足りていない場合、ここで処理を終える
         if ( m_exp < m_needExp ) return;
-
+        
         // レベルアップする
         m_level++;
 
