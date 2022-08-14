@@ -17,6 +17,7 @@ public class MoveCharactorController : MonoBehaviour
     public int m_needExp; // 次のレベルに必要な経験値
 
     public static MoveCharactorController instance;
+    
 
     public void Awake()
     {
@@ -38,6 +39,7 @@ public class MoveCharactorController : MonoBehaviour
         
         // レベルアップする
         m_level++;
+        LevelScript.instance.StopGame();
 
         // 今回のレベルアップに必要だった経験値を記憶しておく
         // （経験値ゲージの表示に使用するため）

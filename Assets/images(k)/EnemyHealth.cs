@@ -14,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
         if (enemyHP <= 0)
         {
             MoveCharactorController.instance.AddExp(3);
+            
             Destroy(gameObject);
         }
     }
