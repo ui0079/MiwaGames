@@ -7,8 +7,10 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
 
     // Update is called once per frame
-    public float x_speed;
-    public float y_speed;
+    private float x_speed;
+    private float y_speed;
+    public  float add_speed;
+
     Vector2 startpos, endpos;
    
     void Update()
@@ -54,7 +56,7 @@ public class CharacterController : MonoBehaviour
 
 
 
-        transform.Translate(this.x_speed, this.y_speed, 0);
+        transform.Translate(this.x_speed + this.add_speed, this.y_speed+this.add_speed, 0);
 
         
 
