@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 4779162670529832778}
   - component: {fileID: 4779162670529832777}
   - component: {fileID: 4779162670529832776}
-  - component: {fileID: 2660886406668480532}
-  - component: {fileID: -8066867470467049879}
-  - component: {fileID: 6157563233543862643}
+  - component: {fileID: 8902336072718045401}
+  - component: {fileID: -8883956360967050410}
+  - component: {fileID: -1783502618137665806}
   m_Layer: 0
-  m_Name: bullet1
+  m_Name: thunder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,7 +45,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4779162670529832782}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 10
   simulationSpeed: 1
   stopAction: 1
   cullingMode: 0
@@ -56,7 +56,7 @@ ParticleSystem:
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
-  autoRandomSeed: 1
+  autoRandomSeed: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -672,8 +672,8 @@ ParticleSystem:
     radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 270}
-    m_Scale: {x: 4.49, y: 4.5, z: 1}
+    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -809,7 +809,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 0
+      value: 360
       mode: 0
       spread: 0
       speed:
@@ -4765,7 +4765,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a7b18607625f00c4aa89dd88218b188e, type: 2}
+  - {fileID: 2100000, guid: 96e9de3177a65904f9dc8e362f0a99a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4786,14 +4786,14 @@ ParticleSystemRenderer:
   m_SortingLayerID: -1869315837
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.04
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
-  m_LengthScale: 2
+  m_LengthScale: -1
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
@@ -4829,7 +4829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 13
---- !u!114 &2660886406668480532
+--- !u!114 &8902336072718045401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4843,7 +4843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPrefabName: 
   player: {fileID: 0}
---- !u!114 &-8066867470467049879
+--- !u!114 &-8883956360967050410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4857,10 +4857,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObject: {fileID: 4779162670529832782}
   partcleSystem: {fileID: 0}
-  speed: 20
-  rate: 10
-  damage: 10
---- !u!114 &6157563233543862643
+  speed: 5
+  rate: 2
+  damage: 2
+--- !u!114 &-1783502618137665806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

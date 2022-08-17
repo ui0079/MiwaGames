@@ -9,6 +9,7 @@ public class Particle : MonoBehaviour
     public GameObject player;
 
     ChangeParticleScript _changeParticleScript;
+    public Dictionary<string, WeaponState> weaponList;
     
     int count = 0;
     
@@ -16,7 +17,10 @@ public class Particle : MonoBehaviour
     void Start()
     {
         _changeParticleScript = GetComponent<ChangeParticleScript>();
+        weaponList = _changeParticleScript.weaponList;
         _changeParticleScript.AddWeapon(currentPrefabName);
+        //_changeParticleScript.ChangeSpeed(currentPrefabName, weaponState.speed);
+        //_changeParticleScript.ChangeAmount(currentPrefabName, weaponState.rate);
     }
 
     // Update is called once per frame
@@ -32,7 +36,6 @@ public class Particle : MonoBehaviour
                 currentPrefabName = _changeParticleScript.ChangeWeapon(currentPrefabName, "bullet1");
                 count++;
             }
-            
         }
         else if (Time.time > 10){
             if(count == 1){

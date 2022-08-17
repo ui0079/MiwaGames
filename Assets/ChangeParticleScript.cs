@@ -5,7 +5,7 @@ using UnityEngine;
 //武器の操作をするクラス
 public class ChangeParticleScript : MonoBehaviour
 {
-    Dictionary<string, WeaponState> weaponList = new Dictionary<string, WeaponState>();
+    public Dictionary<string, WeaponState> weaponList = new Dictionary<string, WeaponState>();
 
     //パーティクルの発射速度を変更
     public void ChangeSpeed(string prefabName, float speed)
@@ -29,16 +29,18 @@ public class ChangeParticleScript : MonoBehaviour
             weaponList[prefabName].partcleSystem.Play();
         }
         else{
-            Debug.Log("NULL");
             GameObject newParticleObject = (GameObject)Resources.Load(prefabName);
             newParticleObject = Instantiate(newParticleObject);
             ParticleSystem newParticle = newParticleObject.GetComponent<ParticleSystem>();
 
-            WeaponState newWeaponState = new WeaponState();
-            newWeaponState.gameObject = newParticleObject;
+            WeaponState newWeaponState = newParticleObject.GetComponent<WeaponState>();
+            Debug.Log("NULL: " + newWeaponState.speed);
             newWeaponState.partcleSystem = newParticle;
-
             weaponList.Add(prefabName, newWeaponState);
+
+            ChangeSpeed(prefabName, newWeaponState.speed);
+            ChangeAmount(prefabName, newWeaponState.rate);
+
             weaponList[prefabName].partcleSystem.Play();
         }
         

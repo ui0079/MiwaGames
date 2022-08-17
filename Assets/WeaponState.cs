@@ -10,4 +10,4 @@ public class WeaponState : MonoBehaviour
     public float speed; //発射速度
     public float rate; //発射回数
     public float damage; //攻撃力
-}
+};
