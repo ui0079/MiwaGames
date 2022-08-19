@@ -151,4 +151,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 0}
   destroySound: {fileID: 0}
-  enemyHP: 0
+  enemyHP: 20

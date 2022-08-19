@@ -46,9 +46,6 @@ public class Particle : MonoBehaviour
         
     }
 
-    private void OnParticleCollision(GameObject other)
-	{
-		Destroy(other.gameObject);
-	}
+   
 
 }
