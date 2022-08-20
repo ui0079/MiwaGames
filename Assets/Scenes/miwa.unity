@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyList:
-  - {fileID: 6696877060510962634, guid: b325b050ec956444d8cff107d56771a2, type: 3}
+  - {fileID: 1720996865998067205, guid: a07d0ee44f485384893cdd5b0d9d1908, type: 3}
   generateFrame: 300
 --- !u!1 &1266200744
 GameObject:
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList:
   - {fileID: 5856866987002245775, guid: feafd51dc3a634740882ad4e2a171628, type: 3}
-  - {fileID: 6696877060510962634, guid: b325b050ec956444d8cff107d56771a2, type: 3}
+  - {fileID: 1720996865998067205, guid: a07d0ee44f485384893cdd5b0d9d1908, type: 3}
   generateFrame: 300
 --- !u!4 &1436996561
 Transform:
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyList:
-  - {fileID: 6696877060510962634, guid: b325b050ec956444d8cff107d56771a2, type: 3}
+  - {fileID: 1720996865998067205, guid: a07d0ee44f485384893cdd5b0d9d1908, type: 3}
   - {fileID: 5856866987002245775, guid: feafd51dc3a634740882ad4e2a171628, type: 3}
   generateFrame: 300
 --- !u!1 &1579849992

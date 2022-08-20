@@ -24,6 +24,11 @@ public class EnemyMove : MonoBehaviour
 	}
 		Vector3 pv = player.transform.position;
 		Vector3 ev = transform.position;
+		Vector2 min = Camera.main.ViewportToWorldPoint(Vector2.zero);
+		Vector2 max = Camera.main.ViewportToWorldPoint(Vector2.one);
+
+		float fx = Mathf.Abs(min.x - max.x);
+		float fy = Mathf.Abs(min.y - max.y);
  
 		float p_vX = pv.x - ev.x;
 		float p_vY = pv.y - ev.y;
@@ -35,18 +40,18 @@ public class EnemyMove : MonoBehaviour
  
 		// 減算した結果がマイナスであればXは減算処理
 		if ( p_vX < 0 ) {
-			vx = p_vX / xy / 200;
+			vx = p_vX / xy / 4000;
 		} else {
-			vx = p_vX / xy / 200;
+			vx = p_vX / xy / 4000;
 		}
 
 		// 減算した結果がマイナスであればYは減算処理
 		if ( p_vY < 0 ) {
-			vy = p_vY / xy / 200;
+			vy = p_vY / xy / 4000;
 		} else {
-			vy = p_vY / xy / 200;
+			vy = p_vY / xy / 4000;
 		}
 
-		transform.Translate(vx, vy, 0);
+		transform.Translate(fx*vx, fy*vy, 0);
 	}
 }
