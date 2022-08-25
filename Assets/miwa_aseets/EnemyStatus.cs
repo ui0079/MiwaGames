@@ -7,5 +7,4 @@ public class EnemyStatus : MonoBehaviour
     public string name;
     public int enemyhp;
     public float speed;
-
 }

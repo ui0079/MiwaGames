@@ -10,6 +10,7 @@ public class ChangeParticleScript : MonoBehaviour
     //パーティクルの発射速度を変更
     public void ChangeSpeed(string prefabName, float speed)
     {
+        weaponList[prefabName].speed = speed;
         var main = weaponList[prefabName].partcleSystem.main;
         main.simulationSpeed = speed;
     }
@@ -17,6 +18,7 @@ public class ChangeParticleScript : MonoBehaviour
     //パーティクルの発射量を変更
     public void ChangeAmount(string prefabName, float rate)
     {
+        weaponList[prefabName].rate = rate;
         var emission = weaponList[prefabName].partcleSystem.emission;
         emission.rateOverTime = rate;
     }

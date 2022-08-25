@@ -120,7 +120,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4790,7 +4790,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.04
+  m_MaxParticleSize: 1
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: -1
@@ -4857,9 +4857,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObject: {fileID: 4779162670529832782}
   partcleSystem: {fileID: 0}
-  speed: 5
-  rate: 2
-  damage: 2
+  speed: 8
+  rate: 4
+  damage: 5
 --- !u!114 &-1783502618137665806
 MonoBehaviour:
   m_ObjectHideFlags: 0
