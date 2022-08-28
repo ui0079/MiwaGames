@@ -14,7 +14,10 @@ public class MoveCharactorController : MonoBehaviour
     public int m_level; // レベル
     public int m_exp; // 経験値
     public int m_prevNeedExp; // 前のレベルに必要だった経験値
-    public int m_needExp; // 次のレベルに必要な経験値
+    public int m_needExp; // 次のレベルに必要な経験
+    public int playerHP=10;
+    
+    
 
     public static MoveCharactorController instance;
     
@@ -28,7 +31,28 @@ public class MoveCharactorController : MonoBehaviour
     }
 
     
-
+    // public void Damage(int damage) {
+    //     playerHP -= damage;
+    //     if (playerHP <= 0)
+    //     {
+            
+            
+    //         Destroy(gameObject);
+    //     }
+    // }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            playerHP -= 1;
+            ScoreGauge.instance.Damage1(1);
+ 
+            if (playerHP <= 0)
+        {
+            Destroy(gameObject);
+        }
+        }
+    }
     public void AddExp( int exp )
     {
         // 経験値を増やす
