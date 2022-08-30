@@ -46,14 +46,16 @@ public class Bossanime : MonoBehaviour
 		} else {
 			vy = p_vY / xy / 4000;
 		}
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        anime.SetBool("isWalking", movement != Vector2.zero);
+       
         if (movement != Vector2.zero)
         {
             anime.SetFloat("X", fx*vx);
             anime.SetFloat("Y", fy*vy);
         }
+
+        movement.x = fx*vx;
+        movement.y = fy*vy;
+        anime.SetBool("isWalking", movement != Vector2.zero);
     }
     private void FixedUpdate()
     {
